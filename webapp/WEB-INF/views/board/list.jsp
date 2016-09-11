@@ -26,13 +26,11 @@
 						<th>제목</th>
 						<th>작성일</th>
 					</tr>
-					<c:forEach items="${boardList}" var="boardVo">					
 					<tr>
-						<td>${boardVo.no }</td>
-						<td><a href="view?no=${boardVo.no }">${boardVo.title }</a></td>
-						<td>${boardVo.regDate }</td>
+						<td></td>
+						<td></td>
+						<td></td>
 					</tr>
-					</c:forEach>
 				</table>
 				<div class="bottom">
 					<a href="write" id="new-book">글쓰기</a>

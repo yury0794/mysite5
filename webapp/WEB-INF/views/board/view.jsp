@@ -23,19 +23,19 @@
 					</tr>
 					<tr>
 						<td class="label">제목</td>
-						<td>${boardVo.title }</td>
+						<td></td>
 					</tr>
 					<tr>
 						<td class="label">내용</td>
 						<td>
 							<div class="view-content">
-								${boardVo.content }
+								
 							</div>
 						</td>
 					</tr>
 				</table>
 				<div class="bottom">
-					<a href="modify?no=${boardVo.no }">글수정</a>
+					<a href="">글수정</a>
 				</div>
 			</div>
 		</div>
