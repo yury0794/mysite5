@@ -1,0 +1,26 @@
+*				{ margin:0; padding:0 }
+body			{ font:13px "맑은 고딕", 돋움, 굴림; text-align:center; background-color:#ccc;}
+html, body		{ height :100% !important;}
+
+.container {height: 83%;}
+#header {
+	height: 80px;
+	background-color: #a94442;
+}
+
+.asideWrap {height: 100%;}
+#aside {
+	background-color: #337ab7;
+	height: 100%;
+}
+
+#content {
+	background-color: #ccc;
+}
+
+#footer {
+	height: 60px;
+	background-color: #a94442;
+}
+
+
