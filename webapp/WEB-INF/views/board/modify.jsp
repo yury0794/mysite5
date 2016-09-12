@@ -21,16 +21,16 @@
 						</tr>
 						<tr>
 							<td class="label">제목</td>
-							<td><input type="text" name="title" value=""></td>
+							<td><input type="text" name="title" value="${BoardVO.title }"></td>
 						</tr>
 						<tr>
 							<td class="label">내용</td>
 							<td>
-								<textarea id="content" name="content"></textarea>
+								<textarea id="content" name="content">${BoardVO.content }</textarea>
 							</td>
 						</tr>
 					</table>
-					<input type="hidden" name="no" value=""/>
+					<input type="hidden" name="no" value="${BoardVO.no }"/>
 					<div class="bottom">
 						<a href="javascript:history.go(-1);">취소</a>
 						<input type="submit" value="수정">
