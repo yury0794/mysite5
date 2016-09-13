@@ -2,31 +2,40 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="bbs">
-	
-	<insert id="insertBoard" parameterType="kr.ac.sungkyul.mysite.vo.BoardVO" >
-		<![CDATA[
+
+	<insert id="insertBoard" parameterType="kr.ac.sungkyul.mysite.vo.BoardVO">
+
+		<selectKey resultType="java.lang.Integer" keyProperty="no"
+			order="BEFORE">
+       	<![CDATA[
+       		SELECT seq_bbs.nextVal as no FROM DUAL
+       	]]>
+		</selectKey>
+		
+		<![CDATA[	
 			insert into bbs(
 				no, title, content, regDate
 			)
 			values
 			(
-				seq_bbs.nextVal,
+				#{no},
 				#{title},
 				#{content},
 				sysdate
 			)
 		]]>
 	</insert>
-	
+
 	<select id="listBoard" resultType="kr.ac.sungkyul.mysite.vo.BoardVO">
 		<![CDATA[
 			select no, title, regDate from bbs
 			order by no desc
 		]]>
 	</select>
-	
-	
-	<select id="selectBoard" parameterType="java.lang.Integer" resultType="kr.ac.sungkyul.mysite.vo.BoardVO">
+
+
+	<select id="selectBoard" parameterType="java.lang.Integer"
+		resultType="kr.ac.sungkyul.mysite.vo.BoardVO">
 		<![CDATA[
 			select no, title, content, regDate from bbs
 			where no=#{no}
@@ -41,15 +50,42 @@
 			where no=#{no}
 		]]>
 	</update>
-	
+
 	<delete id="deleteBoard" parameterType="java.lang.Integer">
 		<![CDATA[
 			delete from bbs
 			where no=#{no}
 		]]>
 	</delete>
-	
 
-	
+
+	<insert id="insertAttachFile" parameterType="kr.ac.sungkyul.mysite.vo.AttachFileVO">
+		<![CDATA[
+			insert into bbs_file(
+				fNO, no, path, orgName, saveName, fileSize
+			)
+			values (
+				seq_bbs_file.nextVal, #{no}, #{path}, #{orgName}, #{saveName}, #{fileSize} 
+			)
+		]]>
+	</insert>
+
+
+
+
+	<select id="selectAttachFileByNO" parameterType="java.lang.Integer"
+		resultType="kr.ac.sungkyul.mysite.vo.AttachFileVO">
+		select * from bbs_file where no=#{no}
+	</select>
+
+
+
+
+	<select id="selectAttachFileByFNO" parameterType="java.lang.Integer"
+		resultType="kr.ac.sungkyul.mysite.vo.AttachFileVO">
+		select * from bbs_file where fNO=#{fNO}
+	</select>
+
+
 </mapper>
 	

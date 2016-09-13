@@ -36,7 +36,7 @@
 						</tr>
 						<tr>
 							<td class="label">첨부파일</td>
-							<td id="attachFile"></td>
+							<td id="attachFile" data-fno="${attachFileVO.fNO }">${attachFileVO.orgName }</td>
 						</tr>
 					</table>
 					<input type="hidden" name="no" value="${BoardVO.no }"/>
@@ -53,4 +53,11 @@
 </body>
 </html>
 
-
+<script>
+/*--------첨부파일 다운로드--- -----------*/
+$("#attachFile").on("click", function(event){
+	var fNO = $(this).data("fno");
+	var url = "download?fNO=" + fNO; 
+	window.open(url);
+});
+</script>

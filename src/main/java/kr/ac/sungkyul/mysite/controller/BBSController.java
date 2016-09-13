@@ -2,6 +2,7 @@ package kr.ac.sungkyul.mysite.controller;
 
 import java.io.FileInputStream;
 import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.ac.sungkyul.mysite.service.BBSService;
+import kr.ac.sungkyul.mysite.vo.AttachFileVO;
 import kr.ac.sungkyul.mysite.vo.BoardVO;
 
 @Controller
@@ -33,9 +35,9 @@ public class BBSController {
 
 	// 글등록
 	@RequestMapping(value = "register", method = RequestMethod.POST)
-	public String registerBoard(BoardVO boardVo) throws Exception {
-		bbsService.insertBoard(boardVo);
-
+	public String registerBoard(BoardVO boardVo, MultipartFile file) throws Exception {
+		bbsService.insertBoard(boardVo, file);
+		System.out.println(file.getOriginalFilename().toString());
 		return "redirect:list";
 	}
 
@@ -53,7 +55,10 @@ public class BBSController {
 	@RequestMapping(value = "view", method = RequestMethod.GET)
 	public String readBoard(int no, Model model) {
 		BoardVO boardVO = bbsService.selectBoard(no);
+		AttachFileVO attachFileVO = bbsService.selectAttachFileByNO(no);
+		
 		model.addAttribute("BoardVO", boardVO);
+		model.addAttribute("attachFileVO", attachFileVO);
 		
 		return "board/view";
 	}
@@ -82,7 +87,28 @@ public class BBSController {
 		return "redirect:list";
 	}
 
-	
-	
+	//파일다운로드
+	@RequestMapping(value = "download", method = RequestMethod.GET)
+	public void downloadFile(int fNO, HttpServletResponse res) throws Exception {
+		System.out.println(fNO);
+		
+		
+		AttachFileVO attachFileVO = bbsService.selectAttachFileByFNO(fNO);
+		
+		String saveName = attachFileVO.getSaveName();
+		String orgName = attachFileVO.getOrgName();
+		    
+		    
+		    
+		res.setContentType("application/download");
+		res.setHeader("Content-disposition", "attachment; filename=\"" + URLEncoder.encode(orgName,"UTF-8") +"\"");
+		OutputStream resOut = res.getOutputStream();
+		
+		FileInputStream fin = new FileInputStream("C:\\upload\\"+saveName);
+		FileCopyUtils.copy(fin, resOut);
+			
+		fin.close();
+		    
+	}
 	
 }
