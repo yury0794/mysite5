@@ -80,3 +80,25 @@ method="post" enctype="multipart/form-data"
 
 
 
+
+
+
+
+@RequestMapping(value = "download", method = RequestMethod.GET)
+public void downloadFile(int fNO, HttpServletResponse res) throws Exception {
+	AttachFileVO attachFileVO = bbsService.selectAttachFileByFNO(fNO);
+	String saveName = attachFileVO.getSaveName();
+	String orgName = attachFileVO.getOrgName();
+	    
+	    
+	    
+	res.setContentType("application/download");
+	res.setHeader("Content-disposition", "attachment; filename=\"" + URLEncoder.encode(orgName,"UTF-8") +"\"");
+	OutputStream resOut = res.getOutputStream();
+	
+	FileInputStream fin = new FileInputStream("C:\\upload\\"+saveName);
+	FileCopyUtils.copy(fin, resOut);
+		
+	fin.close();
+	    
+}
