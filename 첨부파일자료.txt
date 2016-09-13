@@ -1,4 +1,7 @@
 
+<script type="text/javascript" src="/mysite5/assets/js/jquery/jquery-1.9.0.js"></script>
+
+
 #sql쿼리문
 
 CREATE TABLE bbs_file 
