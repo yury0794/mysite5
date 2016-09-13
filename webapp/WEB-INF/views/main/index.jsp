@@ -9,9 +9,6 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="/mysite5/assets/css/main.css" rel="stylesheet"
 	type="text/css">
-<link href="/mysite5/assets/dist/css/bootstrap.min.css" rel="stylesheet"
-	type="text/css">
-</head>
 <body>
 	<div id="container">
 		<c:import url='/WEB-INF/views/include/header.jsp' />

@@ -34,6 +34,10 @@
 								<div class="view-content">${BoardVO.content }</div>
 							</td>
 						</tr>
+						<tr>
+							<td class="label">첨부파일</td>
+							<td id="attachFile"></td>
+						</tr>
 					</table>
 					<input type="hidden" name="no" value="${BoardVO.no }"/>
 					<div class="bottom">
@@ -48,3 +52,5 @@
 	</div>
 </body>
 </html>
+
+

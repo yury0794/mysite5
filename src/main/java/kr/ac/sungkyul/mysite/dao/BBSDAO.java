@@ -33,4 +33,8 @@ public class BBSDAO {
 	public void deleteBoard(int no){
 		sqlSession.delete("bbs.deleteBoard", no);
 	}
+	
+
+	
+
 }

@@ -2,6 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+
+<script type="text/javascript" src="/mysite5/assets/js/jquery/jquery-1.9.0.js"></script>
+</head>
+
 		<div id="header">
 			<h1>MySite</h1>
 			<ul>

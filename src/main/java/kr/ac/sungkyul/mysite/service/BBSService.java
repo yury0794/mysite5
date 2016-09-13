@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import kr.ac.sungkyul.mysite.dao.BBSDAO;
 import kr.ac.sungkyul.mysite.vo.BoardVO;
@@ -14,7 +15,8 @@ public class BBSService {
 	@Autowired
 	private BBSDAO bbsDAO;
 	
-	public void insertBoard(BoardVO boardVo){
+	@Transactional
+	public void insertBoard(BoardVO boardVo) throws Exception {
 		bbsDAO.insertBoard(boardVo);
 	}
 	
@@ -34,4 +36,5 @@ public class BBSService {
 	public void deleteBoard(int no){
 		bbsDAO.deleteBoard(no);
 	}
+
 }
