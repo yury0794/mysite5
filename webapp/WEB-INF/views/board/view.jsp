@@ -11,6 +11,7 @@
 <title>mysite</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <link href="/mysite5/assets/css/board.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/mysite5/assets/js/jquery/jquery-1.9.0.js"></script>
 </head>
 <body>
 	<div id="container">
@@ -23,19 +24,22 @@
 					</tr>
 					<tr>
 						<td class="label">제목</td>
-						<td></td>
+						<td>${vo.title}</td>
 					</tr>
 					<tr>
 						<td class="label">내용</td>
 						<td>
-							<div class="view-content">
-								
-							</div>
+							<div class="view-content">${vo.content}</div>
 						</td>
+					</tr>
+					<tr>
+						<td class="label">첨부파일</td>
+						<td id="attachFile" data-fno="${fileVo.fNo}">${fileVo.orgName}</td
+						>
 					</tr>
 				</table>
 				<div class="bottom">
-					<a href="">글수정</a>
+					<a href="/mysite5/bbs/modify/${vo.no}">글수정</a>
 				</div>
 			</div>
 		</div>
@@ -44,3 +48,11 @@
 	</div>
 </body>
 </html>
+
+<script type="text/javascript">
+	$("#attachFile").on("click", function(event){
+		var fNo = $(this).data("fno");
+		var url = "../download?fNo=" + fNo;
+		window.open(url);
+	})
+</script>

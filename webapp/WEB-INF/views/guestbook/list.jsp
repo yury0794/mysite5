@@ -38,7 +38,7 @@
 						<li>
 							<table>
 								<tr>
-									<td>[${countList - s.index }]</td>
+									<td>[${countList - s.index}]</td>
 									<td>${vo.name }</td>
 									<td>${vo.regDate }</td>
 									<td><a href="/mysite/guestbook?a=deleteform&no=${vo.no }">삭제</a></td>

@@ -26,11 +26,14 @@
 						<th>제목</th>
 						<th>작성일</th>
 					</tr>
+					<c:set var='countList' value='${fn:length(listBoard)}'/>
+					<c:forEach var='boardvo' items='${listBoard}' varStatus='s'>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>${countList - s.index}</td>
+						<td><a href="/mysite5/bbs/view/${boardvo.no}">${boardvo.title}</a></td>
+						<td>${boardvo.regDate}</td>
 					</tr>
+					</c:forEach>
 				</table>
 				<div class="bottom">
 					<a href="write" id="new-book">글쓰기</a>
