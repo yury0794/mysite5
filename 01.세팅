@@ -1,0 +1,20 @@
+<!-- #pom.xml -->
+
+<!-- jackson -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.8.1</version>
+</dependency>
+
+
+
+
+<!-- #spring-servlet.xml -->
+<bean	class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	<property name="supportedMediaTypes">
+		<list>
+			<value>application/json; charset=UTF-8</value>
+		</list>
+	</property>
+</bean>
