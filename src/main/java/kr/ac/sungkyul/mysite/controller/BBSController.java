@@ -11,13 +11,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import kr.ac.sungkyul.mysite.annotation.Auth;
+import kr.ac.sungkyul.mysite.annotation.AuthUser;
 import kr.ac.sungkyul.mysite.service.BBSService;
 import kr.ac.sungkyul.mysite.vo.AttachFileVO;
 import kr.ac.sungkyul.mysite.vo.BoardVO;
+import kr.ac.sungkyul.mysite.vo.UserVo;
 
 @Controller
 @RequestMapping("/bbs")
@@ -26,9 +32,68 @@ public class BBSController {
 	@Autowired
 	private BBSService bbsService;
 
+	@RequestMapping(value = "view2", method = RequestMethod.GET)
+	public String view2() {
+
+		return "board/view2";
+	}
+	
+	
+	// 상세
+	@ResponseBody
+	@RequestMapping(value = "readAjax", method = RequestMethod.POST)
+	public BoardVO readBoardAjax(@RequestBody BoardVO vo) {
+		
+		System.out.println(vo.toString());
+		return vo;
+	}
+	
+
+	/*@ResponseBody
+	@RequestMapping(value = "readAjax", method = RequestMethod.POST)
+	public BoardVO readBoardAjax(int no) {
+		BoardVO boardVO = bbsService.selectBoard(no);
+    	return boardVO;	
+	}
+	*/
+	
+/*	// 상세
+		@ResponseBody
+		@RequestMapping(value = "readAjax", method = RequestMethod.POST)
+		public BoardVO readBoardAjax(int no) {
+			BoardVO boardVO = bbsService.selectBoard(no);
+			return boardVO;
+		}
+*/	
+	/*// 상세
+	@ResponseBody
+	@RequestMapping(value = "readAjax", method = RequestMethod.POST)
+	public BoardVO readBoardAjax(@RequestBody BoardVO vo) {
+		
+		System.out.println(vo.toString());
+		return vo;
+	}*/
+	
+	
+	// 상세
+	@RequestMapping(value = "view", method = RequestMethod.GET)
+	public String readBoard(int no, Model model) {
+		BoardVO boardVO = bbsService.selectBoard(no);
+		AttachFileVO attachFileVO = bbsService.selectAttachFileByNO(no);
+		
+		model.addAttribute("BoardVO", boardVO);
+		model.addAttribute("attachFileVO", attachFileVO);
+		
+		return "board/view";
+	}
+	
+	
+	
+	
 	// 쓰기폼
+	@Auth
 	@RequestMapping(value = "write", method = RequestMethod.GET)
-	public String write() {
+	public String write(@AuthUser UserVo authUser) {
 
 		return "board/write";
 	}
@@ -51,18 +116,7 @@ public class BBSController {
 		return "board/list";
 	}
 
-	// 상세
-	@RequestMapping(value = "view", method = RequestMethod.GET)
-	public String readBoard(int no, Model model) {
-		BoardVO boardVO = bbsService.selectBoard(no);
-		AttachFileVO attachFileVO = bbsService.selectAttachFileByNO(no);
-		
-		model.addAttribute("BoardVO", boardVO);
-		model.addAttribute("attachFileVO", attachFileVO);
-		
-		return "board/view";
-	}
-
+	
 	
 	// 수정폼
 	@RequestMapping(value = "modify", method = RequestMethod.GET)
@@ -109,6 +163,21 @@ public class BBSController {
 			
 		fin.close();
 		    
+	}
+	
+	
+	@RequestMapping(value = "list2", method = RequestMethod.GET)
+	public String list2() {
+		return "board/list2";
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping(value = "listAjax", method = RequestMethod.POST)
+	public List<BoardVO> listAjax(@RequestParam(value = "title")String title) {
+		List<BoardVO> listBoard = bbsService.listBoard();
+		System.out.println(listBoard.toString());
+		return listBoard;
 	}
 	
 }
