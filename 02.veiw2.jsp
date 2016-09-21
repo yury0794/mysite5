@@ -55,5 +55,22 @@
 </body>
 </html>
 <script>
+$("#btn_read").on("click", function(){
+	var no= $("#no").val();
+	
+	$.ajax( {
+		url : "readAjax",
+		type: "POST",
+		data: {"no": no},
+		
+		dataType: "json",
+		success: function( boardVO ){
+				
+		},
+		error: function( jqXHR, status, error ){
+		console.error( status + " : " + error );
+		}
+	});
 
+});
 </script>
