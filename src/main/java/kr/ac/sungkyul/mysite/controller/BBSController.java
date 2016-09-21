@@ -39,23 +39,23 @@ public class BBSController {
 	}
 	
 	
-	// 상세
+	/*// 상세
 	@ResponseBody
 	@RequestMapping(value = "readAjax", method = RequestMethod.POST)
 	public BoardVO readBoardAjax(@RequestBody BoardVO vo) {
 		
 		System.out.println(vo.toString());
 		return vo;
-	}
+	}*/
 	
 
-	/*@ResponseBody
+	@ResponseBody
 	@RequestMapping(value = "readAjax", method = RequestMethod.POST)
 	public BoardVO readBoardAjax(int no) {
 		BoardVO boardVO = bbsService.selectBoard(no);
     	return boardVO;	
 	}
-	*/
+	
 	
 /*	// 상세
 		@ResponseBody

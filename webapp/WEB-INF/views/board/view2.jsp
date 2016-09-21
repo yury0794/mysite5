@@ -49,8 +49,30 @@
 
 <script>
 
-
 $("#btn_read").on("click", function(){
+	var no= $("#no").val();
+	
+	$.ajax( {
+		url : "readAjax",
+		type: "POST",
+		data: {"no":no},
+		dataType: "json",
+		success: function( boardVO ){
+			console.log(boardVO);
+			$("#bTitle").html(boardVO.title);
+			$("#bContent").html(boardVO.content);
+		},
+		error: function( jqXHR, status, error ){
+		console.error( status + " : " + error );
+		}
+	});
+
+});
+
+
+
+
+/* $("#btn_read").on("click", function(){
 	var no= $("#no").val();
 	var title= "제목입니다";
 	var content="내용입니다.";
@@ -82,7 +104,7 @@ $("#btn_read").on("click", function(){
 	});
 
 });
-
+ */
 
 
 

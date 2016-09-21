@@ -1,7 +1,0 @@
-	@RequestMapping(value = "view2", method = RequestMethod.GET)
-	public String view2() {
-
-		return "board/view2";
-	}
-	
-
