@@ -1,0 +1,11 @@
+@RequestMapping(value = "view2", method = RequestMethod.GET)
+public String view2() {
+
+	return "board/view2";
+}
+
+
+@RequestMapping(value = "readAjax", method = RequestMethod.POST)
+public void readBoardAjax(int no) {
+	System.out.println(no);
+}
