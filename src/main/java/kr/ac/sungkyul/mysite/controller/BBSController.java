@@ -11,15 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import kr.ac.sungkyul.mysite.annotation.Auth;
-import kr.ac.sungkyul.mysite.annotation.AuthUser;
 import kr.ac.sungkyul.mysite.service.BBSService;
 import kr.ac.sungkyul.mysite.vo.AttachFileVO;
 import kr.ac.sungkyul.mysite.vo.BoardVO;
@@ -91,9 +88,9 @@ public class BBSController {
 	
 	
 	// 쓰기폼
-	@Auth
+	/*@Auth*/
 	@RequestMapping(value = "write", method = RequestMethod.GET)
-	public String write(@AuthUser UserVo authUser) {
+	public String write(UserVo authUser) {
 
 		return "board/write";
 	}
