@@ -1,0 +1,13 @@
+$.ajax( {
+	url : "",
+	type: "",
+	data:   ,
+	dataType: "json",
+	contentType: "application/json",
+	success: function( data ){
+		
+	},
+	error: function( jqXHR, status, error ){
+		console.error( status + " : " + error );
+	}
+});
