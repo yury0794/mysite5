@@ -1,0 +1,53 @@
+#pom.xml
+
+
+
+ <!-- Java Mail API -->
+      <dependency>
+         <groupId>javax.mail</groupId>
+         <artifactId>mail</artifactId>
+         <version>1.4.3</version>
+      </dependency>
+
+      <!-- Spring Mail Sender -->
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-context-support</artifactId>
+         <version>${org.springframework-version}</version>
+      </dependency>
+
+
+#applicationContext
+
+
+  <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+      <property name="host" value="smtp.gmail.com" />
+      <property name="port" value="587" />
+      <property name="username" value="" />
+      <property name="password" value="" />
+
+      <property name="javaMailProperties">
+         <props>
+            <prop key="mail.smtp.auth">true</prop>
+            <prop key="mail.smtp.starttls.enable">true</prop>
+         </props>
+      </property>
+   </bean>
+
+
+
+@service
+public class UserService {
+   
+   @Autowired
+   private MailSender mailSender;
+
+
+   SimpleMailMessage message = new SimpleMailMessage();
+ 
+   message.setFrom(from);
+   message.setTo(to);
+   message.setSubject(subject);
+   message.setText(msg);
+   mailSender.send(message);
+
