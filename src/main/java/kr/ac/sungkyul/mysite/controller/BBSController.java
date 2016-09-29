@@ -12,8 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.ac.sungkyul.mysite.service.BBSService;
@@ -35,7 +37,7 @@ public class BBSController {
 
 	// 글등록
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
-	public String registerBoard(BoardVo boardVo, MultipartFile file) throws Exception{
+	public String registerBoard(BoardVo boardVo, MultipartFile file) throws Exception {
 		bbsService.insertBoard(boardVo, file);
 		return "redirect:/bbs/list";
 	}
@@ -72,22 +74,40 @@ public class BBSController {
 		bbsService.update(vo);
 		return "redirect:/bbs/list";
 	}
-	
+
 	// 파일 다운로드
 	@RequestMapping(value = "/download", method = RequestMethod.GET)
 	public void downloadFile(int fNo, HttpServletResponse res) throws Exception {
-		System.out.println(fNo);
 		AttachFileVo attachFileVO = bbsService.selectAttachFileByFNO(fNo);
 		String saveName = attachFileVO.getSaveName();
-		String orgName = attachFileVO.getOrgName();		    
-		    
+		String orgName = attachFileVO.getOrgName();
+
 		res.setContentType("application/download");
-		res.setHeader("Content-disposition", "attachment; filename=\"" + URLEncoder.encode(orgName,"UTF-8") +"\"");
+		res.setHeader("Content-disposition", "attachment; filename=\"" + URLEncoder.encode(orgName, "UTF-8") + "\"");
 		OutputStream resOut = res.getOutputStream();
-		
-		FileInputStream fin = new FileInputStream("C:\\upload\\"+saveName);
+
+		FileInputStream fin = new FileInputStream("C:\\upload\\" + saveName);
 		FileCopyUtils.copy(fin, resOut);
-		
-		fin.close();		    
+
+		fin.close();
+	}
+
+	@RequestMapping(value = "/view2", method = RequestMethod.GET)
+	public String view2() {
+		return "board/view2";
+	}
+
+	/*@ResponseBody
+	@RequestMapping(value = "/readAjax", method = RequestMethod.POST)
+	public BoardVo readBoardAjax(int no) {
+		BoardVo boardVo = bbsService.readBoard(no);
+		return boardVo;
+	}*/
+	
+	@ResponseBody
+	@RequestMapping(value = "/readAjax", method = RequestMethod.POST)
+	public BoardVo readBoardAjax(@RequestBody BoardVo vo) {
+		System.out.println(vo.toString());
+		return vo;
 	}
 }
