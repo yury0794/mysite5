@@ -172,3 +172,188 @@
 	<context:annotation-config />
 
 </beans>
+
+
+10월 05, 2016 12:44:11 오후 org.apache.tomcat.util.digester.SetPropertiesRule begin
+경고: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:mysite5' did not find a matching property.
+10월 05, 2016 12:44:11 오후 org.apache.tomcat.util.digester.SetPropertiesRule begin
+경고: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:mysite' did not find a matching property.
+10월 05, 2016 12:44:11 오후 org.apache.tomcat.util.digester.SetPropertiesRule begin
+경고: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:readingbetter' did not find a matching property.
+10월 05, 2016 12:44:11 오후 org.apache.tomcat.util.digester.SetPropertiesRule begin
+경고: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:mymysql' did not find a matching property.
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server version:        Apache Tomcat/7.0.63
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server built:          Jun 30 2015 08:08:33 UTC
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server number:         7.0.63.0
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Name:               Windows 10
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: OS Version:            10.0
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Architecture:          amd64
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Java Home:             C:\Program Files\Java\jre1.8.0_91
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Version:           1.8.0_91-b15
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM Vendor:            Oracle Corporation
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_BASE:         C:\Users\S401-09\Documents\sku_0789\workspace5\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_HOME:         C:\Users\S401-09\Documents\sku_0789\apache-tomcat-7.0.63
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.base=C:\Users\S401-09\Documents\sku_0789\workspace5\.metadata\.plugins\org.eclipse.wst.server.core\tmp0
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dcatalina.home=C:\Users\S401-09\Documents\sku_0789\apache-tomcat-7.0.63
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dwtp.deploy=C:\Users\S401-09\Documents\sku_0789\workspace5\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Djava.endorsed.dirs=C:\Users\S401-09\Documents\sku_0789\apache-tomcat-7.0.63\endorsed
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Command line argument: -Dfile.encoding=UTF-8
+10월 05, 2016 12:44:11 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+정보: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre1.8.0_91\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jre1.8.0_91/bin/server;C:/Program Files/Java/jre1.8.0_91/bin;C:/Program Files/Java/jre1.8.0_91/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Users\S401-09\AppData\Local\Microsoft\WindowsApps;;C:\sku\eclipse;;.
+10월 05, 2016 12:44:11 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["http-bio-8088"]
+10월 05, 2016 12:44:11 오후 org.apache.coyote.AbstractProtocol init
+정보: Initializing ProtocolHandler ["ajp-bio-8009"]
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.Catalina load
+정보: Initialization processed in 360 ms
+10월 05, 2016 12:44:11 오후 org.apache.catalina.core.StandardService startInternal
+정보: Starting service Catalina
+10월 05, 2016 12:44:11 오후 org.apache.catalina.core.StandardEngine startInternal
+정보: Starting Servlet Engine: Apache Tomcat/7.0.63
+10월 05, 2016 12:44:11 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10월 05, 2016 12:44:12 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10월 05, 2016 12:44:12 오후 org.apache.catalina.core.ApplicationContext log
+정보: No Spring WebApplicationInitializer types detected on classpath
+10월 05, 2016 12:44:12 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring root WebApplicationContext
+10월 05, 2016 12:44:12 오후 org.springframework.web.context.ContextLoader initWebApplicationContext
+정보: Root WebApplicationContext: initialization started
+10월 05, 2016 12:44:12 오후 org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+정보: Refreshing Root WebApplicationContext: startup date [Wed Oct 05 12:44:12 KST 2016]; root of context hierarchy
+10월 05, 2016 12:44:12 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+10월 05, 2016 12:44:12 오후 org.springframework.web.context.ContextLoader initWebApplicationContext
+정보: Root WebApplicationContext: initialization completed in 453 ms
+10월 05, 2016 12:44:13 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10월 05, 2016 12:44:13 오후 org.apache.catalina.core.ApplicationContext log
+정보: No Spring WebApplicationInitializer types detected on classpath
+10월 05, 2016 12:44:13 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring root WebApplicationContext
+10월 05, 2016 12:44:13 오후 org.springframework.web.context.ContextLoader initWebApplicationContext
+정보: Root WebApplicationContext: initialization started
+10월 05, 2016 12:44:13 오후 org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+정보: Refreshing Root WebApplicationContext: startup date [Wed Oct 05 12:44:13 KST 2016]; root of context hierarchy
+10월 05, 2016 12:44:13 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+10월 05, 2016 12:44:16 오후 org.springframework.web.context.ContextLoader initWebApplicationContext
+정보: Root WebApplicationContext: initialization completed in 2537 ms
+10월 05, 2016 12:44:16 오후 org.apache.catalina.startup.TldConfig execute
+정보: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+10월 05, 2016 12:44:16 오후 org.apache.catalina.core.ApplicationContext log
+정보: No Spring WebApplicationInitializer types detected on classpath
+10월 05, 2016 12:44:16 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring root WebApplicationContext
+10월 05, 2016 12:44:16 오후 org.springframework.web.context.ContextLoader initWebApplicationContext
+정보: Root WebApplicationContext: initialization started
+10월 05, 2016 12:44:17 오후 org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+정보: Refreshing Root WebApplicationContext: startup date [Wed Oct 05 12:44:17 KST 2016]; root of context hierarchy
+10월 05, 2016 12:44:17 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+10월 05, 2016 12:44:17 오후 org.springframework.web.context.ContextLoader initWebApplicationContext
+정보: Root WebApplicationContext: initialization completed in 578 ms
+10월 05, 2016 12:44:17 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["http-bio-8088"]
+10월 05, 2016 12:44:17 오후 org.apache.coyote.AbstractProtocol start
+정보: Starting ProtocolHandler ["ajp-bio-8009"]
+10월 05, 2016 12:44:17 오후 org.apache.catalina.startup.Catalina start
+정보: Server startup in 6353 ms
+10월 05, 2016 12:44:37 오후 org.apache.catalina.core.ApplicationContext log
+정보: Initializing Spring FrameworkServlet 'spring'
+10월 05, 2016 12:44:37 오후 org.springframework.web.servlet.DispatcherServlet initServletBean
+정보: FrameworkServlet 'spring': initialization started
+10월 05, 2016 12:44:37 오후 org.springframework.web.context.support.XmlWebApplicationContext prepareRefresh
+정보: Refreshing WebApplicationContext for namespace 'spring-servlet': startup date [Wed Oct 05 12:44:37 KST 2016]; parent: Root WebApplicationContext
+10월 05, 2016 12:44:37 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-servlet.xml]
+10월 05, 2016 12:44:37 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/book/booklist],methods=[GET]}" onto public java.lang.String kr.ac.mymysql.controller.BookController.bookListPage(org.springframework.ui.Model)
+10월 05, 2016 12:44:38 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-servlet': startup date [Wed Oct 05 12:44:37 KST 2016]; parent: Root WebApplicationContext
+10월 05, 2016 12:44:38 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: WebApplicationContext for namespace 'spring-servlet': startup date [Wed Oct 05 12:44:37 KST 2016]; parent: Root WebApplicationContext
+10월 05, 2016 12:44:38 오후 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+정보: Mapped URL path [/**] onto handler 'org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler#0'
+10월 05, 2016 12:44:38 오후 org.springframework.web.servlet.DispatcherServlet initServletBean
+정보: FrameworkServlet 'spring': initialization completed in 469 ms
+10월 05, 2016 12:44:38 오후 org.apache.catalina.core.StandardWrapperValve invoke
+심각: Servlet.service() for servlet [spring] in context with path [/mymysql] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
+### Error querying database.  Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for book.list
+### Cause: java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for book.list] with root cause
+java.lang.IllegalArgumentException: Mapped Statements collection does not contain value for book.list
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:797)
+	at org.apache.ibatis.session.Configuration.getMappedStatement(Configuration.java:631)
+	at org.apache.ibatis.session.Configuration.getMappedStatement(Configuration.java:624)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:107)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:102)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:358)
+	at com.sun.proxy.$Proxy13.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:191)
+	at kr.ac.mymysql.dao.BookDao.getList(BookDao.java:18)
+	at kr.ac.mymysql.service.BookService.getList(BookService.java:18)
+	at kr.ac.mymysql.controller.BookController.bookListPage(BookController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:221)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:137)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:111)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:806)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:729)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:624)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:731)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:85)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:957)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:423)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1079)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:620)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+
